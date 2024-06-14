@@ -1,0 +1,42 @@
+/* 0-bases */
+@import '0-base/base-dir';
+/* 1-pages */
+@import '1-page/page-dir';
+/* 2-modules */
+@import '2-module/module-dir';
+
+/*FontFamily*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 300;
+}
+
+*::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+*::-webkit-scrollbar:vertical {
+    width:6px;
+}
+
+*::-webkit-scrollbar-button:increment,*::-webkit-scrollbar-button {
+    display: none;
+} 
+
+*::-webkit-scrollbar:horizontal {
+    height: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #a1a1a198;
+    border-radius: 20px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}

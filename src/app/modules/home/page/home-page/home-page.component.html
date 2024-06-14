@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="containerNavBar">
+        <app-nav-bar (searchEvent1)="search($event)" ></app-nav-bar>
+    </div>
+    <div class="containerSearchs">
+        <div class="containerBuscador"> 
+            <app-buscador (searchEvent)="search($event)"></app-buscador>
+        </div>
+        <div class="containerResult">
+            <app-results [querySearch] = "querySearch"></app-results>
+        </div>
+    </div>
+</div>
+

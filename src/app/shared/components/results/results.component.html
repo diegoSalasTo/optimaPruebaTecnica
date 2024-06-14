@@ -1,0 +1,12 @@
+<div class="gyfresult">
+
+    <div class="boxresult" *ngFor="let item of ApiSearch">
+        <div class="imgresult">
+            <img src="{{item.images.original.url}}" alt="">
+        </div>
+        <div class="titleresult">
+            <p>{{item.title}}</p>
+        </div>
+
+    </div>
+</div>

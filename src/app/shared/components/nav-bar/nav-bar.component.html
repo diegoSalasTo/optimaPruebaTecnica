@@ -1,0 +1,12 @@
+<div class="navBar-container">
+    <div class="navBar-title">
+        <h1>GifsApp</h1>
+    </div>
+    <hr/>
+    <div class="navBar-search">
+        <div class="textSearch" *ngFor="let busqueda of busquedas" (click)="obtenerNombre(busqueda)" ><p >{{ busqueda }}</p></div>
+    </div> 
+    <div class="creator">
+        coded by diego salas toledo
+    </div>
+</div>

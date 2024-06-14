@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    .containerNavBar{
+
+        height: $navbar-height;
+    }
+    .containerSearchs {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; 
+        .containerBuscador{
+            height: 90px;
+        }
+        .containerResult{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+    }
+}
