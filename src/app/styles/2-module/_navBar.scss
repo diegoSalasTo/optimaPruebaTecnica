@@ -18,11 +18,22 @@
         gap: 15px;
         width: 250px;
         height: 75%;
-        padding: 20px 0;
+        padding: 10px 0 20px;
         flex-direction: column;
         align-items: center;
         overflow-y: auto;
-
+        .buttonDelete{
+            height: 20px;
+            display: flex;
+            width: 100%;
+            justify-content: end;
+            cursor: pointer;
+            svg{
+                height: 100%;
+                width: 20px;
+                margin-right: 10px;
+            }
+        }
         .textSearch {
             width: 80%;
             height: 35px;
@@ -54,6 +65,14 @@
 
     .creator {
         flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        span{
+            text-align: center;
+            color: yellow ;
+        }
     }
 }
 
@@ -74,7 +93,7 @@
             }
         }
         .creator {
-            font-size: 0.7em
+            font-size: 0.7em;
         }
     }
  

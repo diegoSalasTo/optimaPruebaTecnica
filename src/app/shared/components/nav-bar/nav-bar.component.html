@@ -4,9 +4,12 @@
     </div>
     <hr/>
     <div class="navBar-search">
+        <div class="buttonDelete" (click)="clearLocalStorage()">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 64 64" style="enable-background:new 0 0 512 512" xml:space="preserve" fill-rule="evenodd" class=""><g><path d="M10 18v36a7.998 7.998 0 0 0 8 8h28a7.998 7.998 0 0 0 8-8V18zm10 7v25h4V25zm20 0v25h4V25zm-10 0v25h4V25zM22 10H6v4h52v-4H42a8 8 0 0 0-8-8h-4a8 8 0 0 0-8 8zm16 0a4 4 0 0 0-4-4h-4a4 4 0 0 0-4 4z" fill="#ffffff" opacity="1" data-original="#000000"></path></g></svg>
+        </div>
         <div class="textSearch" *ngFor="let busqueda of busquedas" (click)="obtenerNombre(busqueda)" ><p >{{ busqueda }}</p></div>
     </div> 
     <div class="creator">
-        coded by diego salas toledo
+        <span> Coded by: diego salas toledo</span>
     </div>
 </div>

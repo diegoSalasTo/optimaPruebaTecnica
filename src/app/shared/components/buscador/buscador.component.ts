@@ -27,7 +27,7 @@ export class BuscadorComponent  {
       this.search();
       this.cookie.set("USERID",this.searchQuery)
       const userID = this.cookie.get("USERID");
-      this.cookies.busquedas.push(userID); // Agregar el userID al arreglo en el servicio
+      this.cookies.busquedas.push(userID); 
       localStorage.setItem('busquedas', JSON.stringify(this.cookies.busquedas));
 
       console.log(this.cookies.busquedas);

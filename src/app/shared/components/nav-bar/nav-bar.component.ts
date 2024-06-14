@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
-import { SearchApi } from 'src/app/core/models/api';
+
 import { CookieServiceO } from 'src/app/core/services/cookie.service';
 import { ServiceService } from 'src/app/core/services/service.service';
 
@@ -10,7 +11,7 @@ import { ServiceService } from 'src/app/core/services/service.service';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {
-  constructor(private cookie:CookieServiceO,private servicio:ServiceService , private cookies:CookieService){}
+  constructor(private cookie:CookieServiceO,private servicio:ServiceService , private cookies:CookieService,private router: Router){}
 
   @Output() searchEvent1 = new EventEmitter<string>();
   nameGif: string = '';
@@ -22,10 +23,19 @@ export class NavBarComponent {
     this.nameGif = nombre;
     this.searchEvent1.emit(this.nameGif);
   }
-  search(): void {
-  
+  clearLocalStorage(){
+    if (window.confirm('¿Desea eliminar el historial de búsqueda?')) {
+      if (this.cookie.busquedas.length === 0) {
+        alert('No hay historial');
+      } else {
+        alert('Has aceptado , se eliminará el historial');
+        localStorage.clear();
+        location.reload();
+      }
+   
+    } else {
+      alert('Se mantiene el historial');
+      // Aquí puedes realizar la acción que deseas cuando el usuario cancela
+    }
   }
-
-
-
 }

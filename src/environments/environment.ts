@@ -1,5 +1,4 @@
 export const environment = {
-    production: false,
     //Url Api
     urlApi: "https://api.giphy.com/v1/",
     //Login
